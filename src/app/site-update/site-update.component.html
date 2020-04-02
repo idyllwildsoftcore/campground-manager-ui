@@ -1,0 +1,45 @@
+<h2>Update Site</h2> 
+<div [hidden]="submitted" style="width: 400px;"d></div> 
+<form (ngSubmit)="onSubmit()">
+<hr/>
+<div *ngIf="site">
+  <div class="form-group">
+    <label for="width"></label> 
+    <input type="text" class="form-control" id="width" required [(ngModel)]="site.width" name="width">
+  </div>
+   <div class="form-group">
+    <label for="length"></label> 
+    <input type="text" class="form-control" id="length" required [(ngModel)]="site.length" name="length">
+  </div>
+  <div class="form-group">
+    <label for="electricity"></label> 
+    <input type="text" class="form-control" id="electricity" required [(ngModel)]="site.electricity" name="electricity">
+  </div>
+  <div class="form-group">
+    <label for="electricityAmp"></label> 
+    <input type="text" class="form-control" id="electricityAmp" required [(ngModel)]="site.electricityAmp" name="electricityAmp">
+  </div>
+  <div class="form-group">
+    <label for="water"></label> 
+    <input type="text" class="form-control" id="water" required [(ngModel)]="site.water" name="water">
+  </div>
+  <div class="form-group">
+    <label for="sewage"></label> 
+    <input type="text" class="form-control" id="sewage" required [(ngModel)]="site.sewage" name="sewage">
+  </div>
+  <div class="form-group">
+    <label for="slope"></label> 
+    <input type="text" class="form-control" id="slope" required [(ngModel)]="site.slope" name="slope">
+  </div>
+  <div class="form-group">
+    <label for="img"></label> 
+    <input type="text" class="form-control" id="img" required [(ngModel)]="site.img" name="img">
+  </div> 
+</div>
+</form>
+
+
+<br>
+<button (click)="onSubmit()" class="btn btn-primary">Save</button><br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Site List</button><br>

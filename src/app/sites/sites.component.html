@@ -1,0 +1,36 @@
+
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Width</th>
+          <th scope="col">Length</th>
+          <th scope="col">Electricity</th>
+          <th scope="col">Electricity/Amp</th>
+          <th scope="col">Water</th>
+          <th scope="col">Sewage</th>
+          <th scope="col">Slope</th>
+          <th scope="col">Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let site of sites | async">
+          <th scope="row">{{site.id}}</th>
+          <td>{{site.width}}</td>
+          <td>{{site.length}}</td>
+          <td>{{site.electricity}}</td>
+          <td>{{site.electricityAmp}}</td>
+          <td>{{site.water}}</td>
+          <td>{{site.sewage}}</td>
+          <td>{{site.slope}}</td>
+          <td>{{site.img}}</td>
+          <td>
+              <button (click)="siteDetails(site.id)" class="btn btn-info" style="margin-left: 10px">Details</button> 
+              <button (click)="siteUpdate(site.id)" class="btn btn-info" style="margin-left: 10px">Update</button> 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+

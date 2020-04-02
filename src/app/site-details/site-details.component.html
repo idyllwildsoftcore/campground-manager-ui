@@ -1,0 +1,32 @@
+<h2>Site Details</h2> 
+
+<hr/>
+<div *ngIf="site">
+  <div>
+    <label><b>Width: </b></label> {{site.width}}
+  </div>
+  <div>
+    <label><b>Length: </b></label> {{site.length}}
+  </div>
+  <div>
+    <label><b>Electricity: </b></label> {{site.electricity}}
+  </div> 
+  <div>
+    <label><b>Electricity/Amp: </b></label> {{site.electricityAmp}}
+  </div> 
+  <div>
+    <label><b>Water: </b></label> {{site.water}}
+  </div> 
+  <div>
+    <label><b>Sewage: </b></label> {{site.sewage}}
+  </div> 
+  <div>
+    <label><b>Slope: </b></label> {{site.slope}}
+  </div> 
+  <div>
+    <label><b>Image: </b></label> {{site.img}}
+  </div>  
+</div>
+
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Site List</button><br>
